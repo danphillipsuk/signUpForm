@@ -89,6 +89,7 @@ table {
 
 #top {
   width: 100%;
+  max-width: 900px;
   height: 30vh;
   display: flex;
   flex-direction: column;
@@ -107,12 +108,14 @@ table {
 #middle {
   background-color: #fff;
   border-top: solid 1px #fff;
+  
 }
 
 #middle form {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  max-width: 900px;
 }
 
 #middle form div {
@@ -145,6 +148,19 @@ input[type="password"]:focus {
   border: solid 2px rgb(42, 43, 51);
 } 
 
+#passwordConfirm {
+  display: none;
+  color: red;
+  margin: 5px 0;
+}
+
+#passwordConfirmed {
+  display: none;
+  color: rgb(115, 224, 13);
+  margin: 5px 0;
+}
+
+
 #bottom button {
   padding: 10px 35px;
   cursor: pointer;
@@ -170,18 +186,6 @@ input[type="password"]:focus {
   text-decoration: underline;
 }
 
-#passwordConfirm {
-  display: none;
-  color: red;
-  margin: 5px 0;
-}
-
-#passwordConfirmed {
-  display: none;
-  color: rgb(115, 224, 13);
-  margin: 5px 0;
-}
-
 
 @media screen and (max-width: 959px) {
   #top, #middle, #bottom {
@@ -196,7 +200,8 @@ input[type="password"]:focus {
   }
 
   #hero {
-    height: 150px;
+    height: auto;
+    display: flex;
     align-items: center;
     justify-content: center;
   }
@@ -204,24 +209,24 @@ input[type="password"]:focus {
   #hero h1 {
     width: 100%;
     padding: 20px 50px;
-    margin-top: 25px;
+    margin: 20px auto;
     font-size: 3rem;
   }
 
   #top {
-    height: 150px;
-    padding: 80px 40px;
-    flex-direction: row;
+    height: auto;
+    padding: 40px 80px;
+    flex-direction: column;
   }
 
-  #top h2, #top h3 {
-    width: 100%;
-    margin: none
-  }
+ #top h2{
+   font-size: 1.25rem;
+   line-height: 1.5;
+ }
 
   #middle form div {
     width: 100%;
-    margin: 10px 0;
+    margin: 10px 40px;
   }
 
   input[type="text"],
@@ -229,8 +234,12 @@ input[type="password"]:focus {
   input[type="number"],
   input[type="password"]
  {
-  width: 95%;
+  width: 100%;
   padding: 10px 10px;
   margin-top: 5px;
 }
+
+  #bottom {
+    padding: 20px 80px;
+  }
 }
