@@ -54,7 +54,7 @@ table {
 #hero {
   width: 35%;
   text-align: center;
-  background: url('../images/background.jpg') no-repeat;
+  background: url('./images/background.jpg') no-repeat;
   background-size: cover;
 }
 
